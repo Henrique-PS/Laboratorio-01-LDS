@@ -14,7 +14,7 @@
 ## :rocket: Lab01S01:
 Diagrama de Caso de Uso:
 <br/>
-![CasoDeUso.png](..%2FLDS%2FCasoDeUso.png)
+![!\[CasoDeUso.png\](..%2FLDS%2FCasoDeUso.png)](Projeto/assets/CasoDeUso.png)
 <br/>
 Descrição em Histórias de Usuário:
 <table>
