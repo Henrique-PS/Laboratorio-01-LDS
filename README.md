@@ -29,8 +29,8 @@ Descrição em Histórias de Usuário:
         <sub>
           <b>Daniel souza</b>
             <p>
-              Tenho 24 anos, toco em uma banda, sonho em ficar famoso e viajar o mundo em turnê. Sou aluno de Artes Cênicas, 
-              quero poder cancelar minha matrícula, para ajustar minha carga horária e disciplinas.
+              Tenho 24 anos, toco em uma banda, sonho em ficar famoso e viajar o mundo em turnê. Sou aluno de Artes Cênicas,&nbsp;
+              quero poder cancelar minha matrícula, para ajustar minha carga horária e disciplinas.&nbsp;
             </p>
         </sub>
     </td>
@@ -41,8 +41,8 @@ Descrição em Histórias de Usuário:
         <sub>
           <b>Lorraine Barros</b>
             <p>
-              Tenho 32 anos, gosto de acupuntura e sou professora em uma matéria do curso de Psicologia,
-              quero saber quais e quantos alunos estão matriculados em minha disciplina.
+              Tenho 32 anos, gosto de acupuntura e sou professora em uma matéria do curso de Psicologia,&nbsp;
+              quero saber quais e quantos alunos estão matriculados em minha disciplina.&nbsp;
             </p>
         </sub>
     </td>
@@ -53,8 +53,8 @@ Descrição em Histórias de Usuário:
         <sub>
           <b>Josué Filho</b>
             <p>
-              Tenho 19 anos, amo ler e faço direito, quero me matricular em Direito Penal II, Economia política, 
-              Execução penal e Medicina legal, mas tenho medo de a turma lotar e não conseguir vaga.
+              Tenho 19 anos, amo ler e faço direito, quero me matricular em Direito Penal II, Economia política,&nbsp;
+              Execução penal e Medicina legal, mas tenho medo de a turma lotar e não conseguir vaga.&nbsp;
             </p>
         </sub>
     </td>
