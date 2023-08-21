@@ -17,7 +17,8 @@
 ## :rocket: Lab01S01:
 
 Diagrama de Caso de Uso:
-
+Projeto/diagramas/CasoDeUso.png
+<br/>
 <table>
   <tr>
     <td align="center">
