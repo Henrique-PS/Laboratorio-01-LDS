@@ -16,8 +16,10 @@
 
 ## :rocket: Lab01S01:
 
-Diagrama de Caso de Uso:
+Diagrama de Caso de Uso: <br/>
+![texto](Projeto/diagramas/CasoDeUso.png)
 
+<br/>
 <table>
   <tr>
     <td align="center">
