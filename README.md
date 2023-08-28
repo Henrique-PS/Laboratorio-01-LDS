@@ -50,6 +50,15 @@ Diagrama de Caso de Uso: <br/>
         </p>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlc3NvYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60" width="100px;"/><br>
+        <b>Marcos Andrade</b>
+        <p>
+          Tenho 38 anos, gosto de filmes de ação e sou muito organizado, trabalho como secretário e gostaria de administrar as informações dos alunos com mais segurança, pois utilizar papel é muito trabalhoso.
+        </p>
+    </td>
+  </tr>
 </table>
 
 ## :dart: Professor:
