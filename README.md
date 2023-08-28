@@ -19,6 +19,9 @@
 Diagrama de Caso de Uso: <br/>
 ![texto](Projeto/diagramas/CasoDeUso2.drawio.png)
 
+Diagrama de Classes: <br/>
+![texto](Projeto/diagramas/DiagramaClasses.png)
+
 <br/>
 <table>
   <tr>
