@@ -46,13 +46,13 @@ public class Plataforma {
      * Caso já exista cliente com o login informado lança IllegalArgumentException
      * Caso ocorra erro ao adicionar cliente a plataforma lança IOException
      * @param nome
-     * @param nomeUsuario
+     * @param email
      * @param senha
      * @throws IOException
      * @throws IllegalArgumentException
      */
-    public void cadastrarAluno(String nome, String nomeUsuario, String senha) throws IOException, IllegalArgumentException{
-        Usuario novoAluno = new Aluno(nome, nomeUsuario, senha, 1);
+    public void cadastrarAluno(String nome, String email, String senha) throws IOException, IllegalArgumentException{
+        Usuario novoAluno = new Aluno(nome, email, senha, 1);
 
         adicionarUsuario(novoAluno);
     }
@@ -62,7 +62,7 @@ public class Plataforma {
      * 
      * @param usuario usuario a ser adicionado
      * @throws IOException
-     * @throws IllegalArgumentException cliente ja existe
+     * @throws IllegalArgumentException usuario ja existe
      * 
      */
     public void adicionarUsuario(Usuario usuario) throws IOException, IllegalArgumentException {
@@ -76,13 +76,12 @@ public class Plataforma {
         /**
      * valida se o login do usuario existe, true caso não exista e false caso exista
      * 
-     * @param usuario cliente a ser validado
+     * @param usuario usuario a ser validado
      * @return true caso não exista e false caso exista
      * 
      */
     private boolean validarLoginUsuario(Usuario usuario) {
-        Usuario a = usuarios.get(usuario.getEmail());
-        return a == null ? true : false;
+        return usuarios.get(usuario.getEmail()) == null ? true : false;
     }
 
     public String getUsuarioAtual() {

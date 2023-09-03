@@ -49,7 +49,7 @@ public class App {
             } catch (NumberFormatException e) {
                 System.out.println("Opcao invalida.");
             }
-        }while(!(opcao>=0  && opcao <=1));
+        }while(!(opcao>=0  && opcao <=2));
         return opcao;
     }
 
@@ -113,19 +113,19 @@ public class App {
     }
 
      public static void cadastrarAluno() {
-        String nome, nomeUsuario, senha;
+        String nome, email, senha;
         System.out.println("==========================");
         System.out.println("--Cadastro de Aluno--");
 
         System.out.println("Nome: ");
         nome = teclado.nextLine();
         System.out.println("login: ");
-        nomeUsuario = teclado.nextLine();
+        email = teclado.nextLine();
         System.out.println("Senha: ");
         senha = teclado.nextLine();
 
         try {
-            plataforma.cadastrarAluno(nome, nomeUsuario, senha);
+            plataforma.cadastrarAluno(nome, email, senha);
             System.out.println("\nAluno adicionado com sucesso!");
         } catch (IllegalArgumentException e) {
             System.out.println("\nLogin invalido, já existe aluno cadastrado com esse email\n" + e);

@@ -1,7 +1,5 @@
 package app;
 
-import java.util.Enumeration;
-
 public abstract class Usuario {
 
     private String nome;
@@ -22,10 +20,7 @@ public abstract class Usuario {
     }
 
     public Boolean logar(String login, String senha){
-        if(this.email == login && this.senha == senha)
-            return true;
-        else
-            return false;
+        return this.email.equals(login) && this.senha.equals(senha) ? true : false;
     }
 
     public String getNome() {
