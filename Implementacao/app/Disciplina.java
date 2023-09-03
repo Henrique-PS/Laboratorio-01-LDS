@@ -12,4 +12,17 @@ public class Disciplina {
         this.codigoDisciplina = codigoDisciplina;
         this.semestre = semestre;
     }
+
+    public Integer getSemestre() {
+        return semestre;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTipo() {
+        return tipo.getNome();
+    }
+
 }
