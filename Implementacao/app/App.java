@@ -1,5 +1,6 @@
 package app;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class App {
@@ -21,6 +22,9 @@ public class App {
                         System.out.println("Login invalido. Favor tentar logar novamente ou realizar seu cadastro.");
                     }
                     break;
+                case 2:
+                    cadastrarAluno();
+                    break;
                 default:
                     break;
             }
@@ -36,6 +40,7 @@ public class App {
             System.out.println("Menu");
             System.out.println("=================================================");
             System.out.println("1 - Logar");
+            System.out.println("2 - Cadastro aluno");
             System.out.println("0 - Sair");
             System.out.println("=================================================");
             System.out.print("\nDigite sua opção: ");
@@ -105,5 +110,28 @@ public class App {
         System.out.println("==========================");
         System.out.println("--Realizado logoff--");
         pausa();
+    }
+
+     public static void cadastrarAluno() {
+        String nome, nomeUsuario, senha;
+        System.out.println("==========================");
+        System.out.println("--Cadastro de Aluno--");
+
+        System.out.println("Nome: ");
+        nome = teclado.nextLine();
+        System.out.println("login: ");
+        nomeUsuario = teclado.nextLine();
+        System.out.println("Senha: ");
+        senha = teclado.nextLine();
+
+        try {
+            plataforma.cadastrarAluno(nome, nomeUsuario, senha);
+            System.out.println("\nAluno adicionado com sucesso!");
+        } catch (IllegalArgumentException e) {
+            System.out.println("\nLogin invalido, já existe aluno cadastrado com esse email\n" + e);
+        } catch (IOException e) {
+            System.out.println("Erro na criação do cliente no banco\n" + e);
+        }
+
     }
 }
