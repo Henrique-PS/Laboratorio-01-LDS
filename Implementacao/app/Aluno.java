@@ -15,7 +15,9 @@ public class Aluno extends Usuario{
     }
 
     public void realizarMatricula(LinkedList<Disciplina> disciplinas){
-
+        for(Disciplina x : disciplinas){
+            x.addAluno(this);
+        }
     }
 
     public void cancelarMatricula(Turma turma){
