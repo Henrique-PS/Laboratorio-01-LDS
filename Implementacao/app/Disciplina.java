@@ -10,10 +10,20 @@ public class Disciplina {
     private int semestre;
     private LinkedList<Turma> turmas;
 
-    public Disciplina(String nome, Integer codigoDisciplina, int semestre) {
+
+
+    private Integer codCurso;
+
+    public Disciplina(String nome, Integer codigoDisciplina, ETipo tipo, Integer codCurso) {
         this.nome = nome;
         this.codigoDisciplina = codigoDisciplina;
         this.semestre = semestre;
+        this.tipo = tipo;
+        this.codCurso = codCurso;
+    }
+
+    public Integer getCodCurso() {
+        return codCurso;
     }
 
     public Integer getSemestre() {

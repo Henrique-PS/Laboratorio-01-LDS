@@ -1,5 +1,6 @@
 package app;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.channels.IllegalSelectorException;
 import java.security.KeyException;
@@ -9,10 +10,12 @@ public class App {
 
     static Scanner teclado = new Scanner(System.in);
     static Plataforma plataforma;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         plataforma = new Plataforma();
 
         int opcao;
+        plataforma.carregarCursos("Projeto/docs/cursos.txt");
+
         do {
             opcao = menu();
             limparTela();

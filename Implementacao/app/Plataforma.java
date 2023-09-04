@@ -1,15 +1,23 @@
 package app;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.channels.IllegalSelectorException;
 import java.security.KeyException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Plataforma {
 
     private HashMap<String, Usuario> usuarios;
+
+    public HashMap<String, Curso> getCursos() {
+        return cursos;
+    }
+
     private HashMap<String, Curso> cursos;
     private Usuario usuarioAtual;
 
@@ -59,7 +67,7 @@ public class Plataforma {
      * @throws KeyException
      */
     public void cadastrarAluno(String nome, String email, String senha, String curso) throws IOException, IllegalArgumentException, KeyException{
-        Curso cursoObj = cursos.get(curso.toLowerCase());
+        Curso cursoObj = cursos.get(curso.toUpperCase());
         if(cursoObj != null){
             Usuario novoAluno = new Aluno(nome, email, senha, cursoObj, 1);
             adicionarUsuario(novoAluno);
@@ -177,5 +185,25 @@ public class Plataforma {
             Curso curso = entrada.getValue();
             curso.salvar(caminho);
         }
+    }
+
+    public void carregarCursos(String arquivo) throws FileNotFoundException {
+
+        Scanner scanner = new Scanner(new File(arquivo));
+
+        while (scanner.hasNextLine()) {
+            String linha = scanner.nextLine();
+            String[] dados = linha.split(";");
+
+            String nomeCurso = dados[1];
+            Integer creditosCruso = Integer.parseInt(dados[2]);
+
+            Curso curso = new Curso(nomeCurso, creditosCruso);
+
+//            curso.carregarDisciplinas("Projeto/docs/disciplinas.txt");
+            adicionarCurso(curso);
+        }
+
+        scanner.close();
     }
 }
