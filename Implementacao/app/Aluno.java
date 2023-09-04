@@ -12,6 +12,7 @@ public class Aluno extends Usuario{
         this.curso = curso;
         this.semestreEmCurso = semestreEmCurso;
         financeiro = new Financeiro();
+        tipoUsuario = "A";
     }
 
     public void realizarMatricula(LinkedList<Disciplina> disciplinas){

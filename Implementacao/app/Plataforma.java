@@ -5,6 +5,7 @@ import java.nio.channels.IllegalSelectorException;
 import java.security.KeyException;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Plataforma {
 
@@ -94,6 +95,10 @@ public class Plataforma {
         return usuarios.get(usuario.getEmail()) == null ? true : false;
     }
 
+    public void adicionarCurso(Curso curso) {
+        this.cursos.put(curso.getNome(), curso);
+    }
+
     public String getUsuarioAtual() {
         return this.usuarioAtual.getNome();
     }
@@ -158,5 +163,19 @@ public class Plataforma {
             }
         }
         return str.toString();
+    }
+
+    public void salvarUsuarios(String caminho){
+        for (Map.Entry<String, Usuario> entrada : usuarios.entrySet()) {
+            Usuario usuario  = entrada.getValue();
+            usuario.salvar(caminho);
+        }
+    }
+
+    public void salvarCursos(String caminho){
+        for (Map.Entry<String, Curso> entrada : cursos.entrySet()) {
+            Curso curso = entrada.getValue();
+            curso.salvar(caminho);
+        }
     }
 }

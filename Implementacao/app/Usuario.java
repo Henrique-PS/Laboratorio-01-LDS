@@ -10,6 +10,7 @@ public abstract class Usuario {
     private String email;
     private String senha;
     private static Integer parseNumPessoa;
+    protected String tipoUsuario;
 
     static {
         parseNumPessoa = 0;
@@ -27,7 +28,7 @@ public abstract class Usuario {
     }
 
     public String toString(){
-        return this.numPessoa + ";" + this.nome;
+        return this.tipoUsuario + ";" + this.numPessoa + ";" + this.nome;
     }
 
     public void salvar(String caminhoArq){

@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Curso {
-
     private String nome;
     private int creditos;
     private LinkedList<Disciplina> disciplinas;
@@ -42,5 +41,9 @@ public class Curso {
 
     public LinkedList<Disciplina> getDisciplinas() {
         return (LinkedList<Disciplina>) List.copyOf(disciplinas);
+    }
+
+    public String getNome() {
+        return nome;
     }
 }
