@@ -23,4 +23,8 @@ public class Financeiro {
     public static void setCustoMensalDefault(double custo){
         MENSALIDADE_DEFAULT = custo;
     }
+
+    public void cobrarAluno(){
+
+    }
 }
