@@ -22,7 +22,7 @@ public class Aluno extends Usuario{
     }
 
     public void cancelarMatricula(Turma turma){
-
+        turma.removeAluno();
     }
 
     public Integer getSemestreAtual() {
