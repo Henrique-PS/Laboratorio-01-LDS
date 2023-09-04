@@ -1,0 +1,3 @@
+curso;2
+curso2;5
+curso3;1

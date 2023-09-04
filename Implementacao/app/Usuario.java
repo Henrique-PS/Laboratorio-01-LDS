@@ -1,5 +1,8 @@
 package app;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public abstract class Usuario {
 
     private String nome;
@@ -23,6 +26,23 @@ public abstract class Usuario {
         return this.email.equals(login) && this.senha.equals(senha) ? true : false;
     }
 
+    public String toString(){
+        return this.numPessoa + ";" + this.nome;
+    }
+
+    public void salvar(String caminhoArq){
+        try {
+            FileWriter writer = new FileWriter(caminhoArq, true);
+
+            if (!caminhoArq.equals("")) {
+                writer.write(this.toString() + "\n");
+            }
+
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar dados no arquivo.");
+        }
+    }
     public String getNome() {
         return this.nome;
     }
